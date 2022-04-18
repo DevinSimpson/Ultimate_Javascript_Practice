@@ -1,1 +1,1 @@
-# Ultimate_Javascript_Practice
+# The goal of this project is to create a website containing javascript challenges for developers of any skill level to practice and enhance their knowledge.
