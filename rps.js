@@ -3,6 +3,8 @@ const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
+let computerChoice
+let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id
@@ -48,4 +50,5 @@ function getResult() {
     if (computerChoice === 'scissors' && userChoice === 'paper') {
         result = "You lose! Try again!"
     }
+    resultDisplay.innerHTML = result
 }
