@@ -46,7 +46,7 @@ function tttCheckWin(tttBoard, tttPlayer) {
             break;
         }
     }
-    return gameWon;
+    return tttGameWon;
 }
 
 function tttGameOver(tttGameWon) {
