@@ -60,6 +60,7 @@ function tttGameOver(tttGameWon) {
     for (let i = 0; i < cells.length; i++) {
         cells[i].removeEventListener('click', turnClick, false);
     }
+    declareWinner(tttGameWon.tttPlayer == tttHuPlayer ? 'You win!' : 'You lose.');
 }
 
 function declareWinner(who) {
