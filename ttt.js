@@ -32,4 +32,19 @@ function turnClick(tttSquare) {
 function turn(tttSquareId, tttPlayer) {
   tttOrigBoard[tttSquareId] = tttPlayer;
   document.getElementById(tttSquareId).innerText = tttPlayer;
+  let tttGameWon = tttCheckWin(tttOrigBoard, tttPlayer)
+  if (tttGameWon) tttGameOver(tttGameWon)
+}
+
+function tttCheckWin(tttBoard, tttPlayer) {
+    let tttPlays = tttBoard.reduce(a, e, i) =>
+      (e === tttPlayer)) ? a.concat(i) : a, []);
+    let tttGameWon = null;
+    for (let [tttIndex, tttWin] of tttWinCombos.entries()) {
+        if (tttWin.every(elem => tttPlays.indexOf(elem > -1)) {
+            gameWon = {tttIndex: tttIndex, tttPlayer: tttPlayer};
+            break;
+        })
+    }
+    return gameWon;
 }
