@@ -25,6 +25,11 @@ function startGame() {
     }
 }
 
-function turnClick(square) {
-  turn(square.target.id, tttHuPlayer)
+function turnClick(tttSquare) {
+  turn(tttSquare.target.id, tttHuPlayer)
+}
+
+function turn(tttSquareId, tttPlayer) {
+  tttOrigBoard[tttSquareId] = tttPlayer;
+  document.getElementById(tttSquareId).innerText = tttPlayer;
 }
