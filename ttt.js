@@ -26,7 +26,10 @@ function startGame() {
 }
 
 function turnClick(tttSquare) {
-  turn(tttSquare.target.id, tttHuPlayer)
+  if (typeof tttOrigBoard[tttSquare.target.id] == 'number') {
+    turn(tttSquare.target.id, tttHuPlayer)
+    if (!checkTie()) turn(bestSpot(), tttAiPlayer);  
+  }
 }
 
 function turn(tttSquareId, tttPlayer) {
@@ -58,3 +61,12 @@ function tttGameOver(tttGameWon) {
         cells[i].removeEventListener('click', turnClick, false);
     }
 }
+
+function emptySquares() {
+    return tttOrigBoard.filter(s => typeof s == 'number');
+}
+
+function bestSpot() {
+    return emptySquares()[0];
+}
+
