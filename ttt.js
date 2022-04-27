@@ -50,7 +50,7 @@ function tttCheckWin(tttBoard, tttPlayer) {
 }
 
 function tttGameOver(tttGameWon) {
-    for (let tttIndex of tttWinCombos[gameWon.tttIndex]) {
+    for (let tttIndex of tttWinCombos[tttGameWon.tttIndex]) {
         document.getElementById(tttIndex).style.backgroundColor = 
           tttGameWon.tttPlayer == tttHuPlayer ? 'blue' : 'red';
     }
