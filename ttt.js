@@ -24,3 +24,7 @@ function startGame() {
         cells[i].addEventListener('click', turnClick, false);
     }
 }
+
+function turnClick(square) {
+  turn(square.target.id, tttHuPlayer)
+}
