@@ -38,13 +38,23 @@ function turn(tttSquareId, tttPlayer) {
 
 function tttCheckWin(tttBoard, tttPlayer) {
     let tttPlays = tttBoard.reduce(a, e, i) =>
-      (e === tttPlayer)) ? a.concat(i) : a, []);
+      (e === tttPlayer) ? a.concat(i) : a, []);
     let tttGameWon = null;
     for (let [tttIndex, tttWin] of tttWinCombos.entries()) {
-        if (tttWin.every(elem => tttPlays.indexOf(elem > -1)) {
+        if (tttWin.every(elem => tttPlays.indexOf(elem) > -1)) {
             gameWon = {tttIndex: tttIndex, tttPlayer: tttPlayer};
             break;
-        })
+        }
     }
     return gameWon;
+}
+
+function tttGameOver(tttGameWon) {
+    for (let tttIndex of tttWinCombos[gameWon.tttIndex]) {
+        document.getElementById(tttIndex).style.backgroundColor = 
+          tttGameWon.tttPlayer == tttHuPlayer ? 'blue' : 'red';
+    }
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].removeEventListener('click', turnClick, false);
+    }
 }
