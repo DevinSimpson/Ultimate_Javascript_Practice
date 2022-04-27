@@ -13,3 +13,14 @@ const tttWinCombos = [
 ]
 
 const cells = document.querySelectorAll('.tttcell');
+startGame();
+
+function startGame() {
+    document.querySelector('.ttt-endgame').style.display = 'none'
+    tttOrigBoard = Array.from(Array(9).keys());
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].innerText = '';
+        cells[i].style.removeProperty('background-color');
+        cells[i].addEventListener('click', turnClick, false);
+    }
+}
