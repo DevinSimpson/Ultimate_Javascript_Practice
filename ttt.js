@@ -37,7 +37,7 @@ function turn(tttSquareId, tttPlayer) {
 }
 
 function tttCheckWin(tttBoard, tttPlayer) {
-    let tttPlays = tttBoard.reduce(a, e, i) =>
+    let tttPlays = tttBoard.reduce((a, e, i) =>
       (e === tttPlayer) ? a.concat(i) : a, []);
     let tttGameWon = null;
     for (let [tttIndex, tttWin] of tttWinCombos.entries()) {
