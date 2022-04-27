@@ -42,7 +42,7 @@ function tttCheckWin(tttBoard, tttPlayer) {
     let tttGameWon = null;
     for (let [tttIndex, tttWin] of tttWinCombos.entries()) {
         if (tttWin.every(elem => tttPlays.indexOf(elem) > -1)) {
-            gameWon = {tttIndex: tttIndex, tttPlayer: tttPlayer};
+            tttGameWon = {tttIndex: tttIndex, tttPlayer: tttPlayer};
             break;
         }
     }
