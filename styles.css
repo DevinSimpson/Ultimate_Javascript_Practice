@@ -1,3 +1,11 @@
+html {
+    background-color: rgba(73, 154, 234, 0.7);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -20,6 +28,12 @@
 .topnav a.active {
     background-color: #04AA6D;
     color: white;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 td {
@@ -73,7 +87,12 @@ table tr td:last-child {
 
 .wordle {
     display: flex;
-    background-color: black;
+    background-color: #333;
     height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
 
+h2 {
+    color: rgb(227, 220, 220);
 }
