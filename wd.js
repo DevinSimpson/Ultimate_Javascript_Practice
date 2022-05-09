@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    createSquares()
+
     function createSquares() {
         const gameBoard = document.getElementById("wd-board")
 
@@ -9,4 +11,4 @@ document.addEventListener("DOMContentLoaded", () => {
             gameBoard.appendChild(square);
         }
     }
-})
+});
