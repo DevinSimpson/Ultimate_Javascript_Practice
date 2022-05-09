@@ -1,8 +1,5 @@
 html {
     background-color: rgba(73, 154, 234, 0.7);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 
@@ -32,7 +29,7 @@ html {
 
 .game {
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -88,11 +85,8 @@ table tr td:last-child {
 }
 
 .wordle {
-    display: flex;
+    width: 100%;
     background-color: #333;
-    height: 100%;
-    align-items: center;
-    flex-direction: column;
 }
 
 h2 {
@@ -117,8 +111,8 @@ h2 {
 
 .square {
     border: 2px solid rgb(58, 58, 60);
-    min-width: 60px;
-    min-height: 60px;
+    min-width: 100px;
+    min-height: 100px;
     font-size: 2rem;
     font-weight: bold;
 }
