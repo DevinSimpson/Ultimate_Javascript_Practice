@@ -117,9 +117,7 @@ h2 {
     font-weight: bold;
     color: rgb(227, 220, 220);
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 #wd-keyboard-container {
